@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-serif: 'Volkhov', serif;
+  --font-sans: 'Google Sans Flex', sans-serif;
+  --font-poppins: Poppins, sans-serif;
+}
+
+:root {
+  color: #5e6282;
+  background-color: #fefefe;
+
+  @variant dark {
+    color: #fefefe;
+    background-color: #242424;
+  }
+}
