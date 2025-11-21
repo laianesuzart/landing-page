@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+.header {
+  @apply pt-6 lg:pt-10 pb-4 flex lg:flex-row gap-2 lg:gap-0 items-center justify-between not-dark:text-gray-950;
+}
+
+.menu {
+  @apply absolute right-6 z-1 shadow-md p-8 min-w-2xs rounded bg-white dark:bg-black flex-col gap-4 lg:static lg:flex! lg:flex-row lg:items-center lg:gap-8 lg:p-0 lg:shadow-none lg:bg-transparent!;
+}
+
+.footer__title {
+  @apply text-gray-950 font-bold text-xl mb-8 dark:text-white;
+}
+
+.footer__list {
+  @apply flex flex-col gap-3 text-lg;
+}
+
+.footer__media {
+  @apply size-10 shadow-xs shadow-current rounded-full grid place-content-center text-black dark:text-white;
+}
