@@ -1,15 +1,15 @@
-@import 'tailwindcss';
+@reference './global.css';
 
 .header {
-  @apply pt-6 lg:pt-10 pb-4 flex lg:flex-row gap-2 lg:gap-0 items-center justify-between not-dark:text-gray-950;
+  @apply pt-6 lg:pt-10 pb-4 flex lg:flex-row gap-2 lg:gap-0 items-center justify-between not-dark:text-black;
 }
 
 .menu {
-  @apply absolute right-6 z-1 shadow-md p-8 min-w-2xs rounded bg-white dark:bg-black flex-col gap-4 lg:static lg:flex! lg:flex-row lg:items-center lg:gap-8 lg:p-0 lg:shadow-none lg:bg-transparent!;
+  @apply absolute right-6 z-1 shadow-md p-8 min-w-2xs rounded bg-white dark:bg-black xl:dark:text-black flex-col gap-4 lg:static lg:flex! lg:flex-row lg:items-center lg:gap-8 lg:p-0 lg:shadow-none lg:bg-transparent!;
 }
 
 .footer__title {
-  @apply text-gray-950 font-bold text-xl mb-8 dark:text-white;
+  @apply text-black font-bold text-xl mb-8 dark:text-white;
 }
 
 .footer__list {

@@ -4,6 +4,11 @@
   --font-serif: 'Volkhov', serif;
   --font-sans: 'Google Sans Flex', sans-serif;
   --font-poppins: Poppins, sans-serif;
+  --color-*: initial;
+  --color-light-red: #df6951;
+  --color-white: #fefefe;
+  --color-black: #242424;
+  --color-orange: #ff6900;
 }
 
 :root {
