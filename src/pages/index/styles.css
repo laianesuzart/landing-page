@@ -1,0 +1,9 @@
+@reference '../global.css';
+
+.subtitle {
+  @apply font-poppins uppercase font-semibold text-sm xl:text-lg;
+}
+
+.title {
+  @apply font-serif text-3xl xl:text-5xl font-bold mt-2 mb-8 xl:mb-16 text-black dark:text-white;
+}
