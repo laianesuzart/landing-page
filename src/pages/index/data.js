@@ -42,3 +42,11 @@ export const destinations = [
     description: '28-day trip',
   },
 ];
+
+export const airlines = [
+  { image: '/src/assets/airlines-01.png', alt: 'Axon Airlines' },
+  { image: '/src/assets/airlines-02.png', alt: 'Jetstar' },
+  { image: '/src/assets/airlines-03.png', alt: 'Expedia' },
+  { image: '/src/assets/airlines-04.png', alt: 'Qantas' },
+  { image: '/src/assets/airlines-05.png', alt: 'Alitalia' },
+];

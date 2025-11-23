@@ -1,8 +1,9 @@
 import './styles.css';
 
 import { Button } from '../../components/atoms/Button';
-import { destinations, features } from './data';
+import { airlines, destinations, features } from './data';
 import PlayIcon from '../../assets/icons/play.svg?react';
+import SendIcon from '../../assets/icons/send.svg?react';
 import underline from '../../assets/underline.png';
 import { FeatureItem } from '../../components/molecules/FeatureItem';
 import { ImageCard } from '../../components/molecules/ImageCard';
@@ -10,6 +11,10 @@ import { ImageCard } from '../../components/molecules/ImageCard';
 export { Page };
 
 function Page() {
+  const onSubscribe = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <>
       <section className="grid xl:grid-cols-2">
@@ -73,20 +78,60 @@ function Page() {
           <div className="hidden xl:block absolute -right-2 bottom-8 -z-10 w-24 h-64 bg-[url(/src/assets/decoration-02.svg)] bg-no-repeat bg-contain"></div>
         </div>
       </section>
-      <section>
-        <p className="subtitle">Fast and easy</p>
-        <h2 className="title">Book Your Next Trip in 3 Easy Steps</h2>
+      <section className="grid xl:grid-cols-2">
+        <div>
+          <p className="subtitle">Fast and easy</p>
+          <h2 className="title">Book Your Next Trip in 3 Easy Steps</h2>
+        </div>
+        <div></div>
       </section>
-      <section>
-        <p className="subtitle">Testimonials</p>
-        <h2 className="title">What people say about us</h2>
+      <section className="grid xl:grid-cols-2">
+        <div>
+          <p className="subtitle">Testimonials</p>
+          <h2 className="title">What people say about us</h2>
+        </div>
+        <div></div>
       </section>
-      <div></div>
-      <section>
-        <p className="subtitle">
+      <div className="flex flex-wrap gap-4 justify-center xl:justify-between">
+        {airlines.map((airline) => (
+          <img
+            src={airline.image}
+            alt={airline.alt}
+            key={airline.alt}
+            className="object-contain py-4 px-8 rounded-2xl bg-transparent grayscale dark:invert transition-all hover:dark:bg-white hover:dark:invert-0 hover:shadow-lg hover:grayscale-0"
+          />
+        ))}
+      </div>
+      <section className="relative bg-[#dfd7f933] dark:bg-[#5e628233] py-12 px-4 xl:py-20 rounded-2xl rounded-tl-4xl md:rounded-tl-[90px] mb-6 xl:mb-16">
+        <p className="font-poppins font-semibold leading-8 text-xl xl:text-3xl mb-8 xl:mb-18 max-w-[40ch] text-center mx-auto">
           Join our newsletter for updates, travel insights, and exclusive Jadoo offers.
         </p>
-        <form action=""></form>
+        <form
+          onSubmit={onSubscribe}
+          className="px-6 flex flex-col xl:flex-row items-center gap-6 max-w-2xl mx-auto"
+        >
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your best email"
+            className="bg-white text-black rounded-xl px-2 h-15 w-full xl:w-8/12"
+          />
+          <Button
+            type="submit"
+            className="w-full xl:w-4/12 text-white bg-linear-[180deg,#FF946D,#FF7D68] transition-colors outline-offset-4 outline-dashed outline-transparent hover:outline-light-red"
+          >
+            Subscribe
+          </Button>
+        </form>
+        <div className="absolute right-0 top-0 z-10 size-16 rounded-full grid place-content-center bg-linear-[201.65deg,#747DEF_10.27%,#5E3BE1] -translate-y-4 translate-x-4">
+          <SendIcon
+            aria-hidden="true"
+            className="text-white size-8 rotate-6 motion-safe:animate-wiggle"
+          />
+        </div>
+        <div className="absolute right-0 top-0 size-70 -z-10 hidden 2xl:block bg-[url(/src/assets/decoration-04.svg)] bg-cover bg-right"></div>
+        <div className="absolute left-0 bottom-0 size-[420px] -z-10 hidden 2xl:block bg-[url(/src/assets/decoration-03.svg)] bg-no-repeat bg-contain bg-bottom -translate-x-16"></div>
+        <div className="absolute right-0 bottom-0 size-36 -z-10 hidden 2xl:block bg-[url(/src/assets/decoration-05.svg)] bg-no-repeat bg-contain translate-y-16 translate-x-[calc(50%+24px)]"></div>
       </section>
     </>
   );

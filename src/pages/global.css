@@ -9,6 +9,13 @@
   --color-white: #fefefe;
   --color-black: #242424;
   --color-orange: #ff6900;
+  --animate-wiggle: wiggle 1.4s ease-in-out infinite alternate;
+
+  @keyframes wiggle {
+    to {
+      transform: rotate(30deg);
+    }
+  }
 }
 
 :root {
