@@ -1,12 +1,15 @@
 import './styles.css';
 
 import { Button } from '../../components/atoms/Button';
-import { airlines, destinations, features } from './data';
+import { airlines, destinations, features, testimonials, travelSteps } from './data';
 import PlayIcon from '../../assets/icons/play.svg?react';
 import SendIcon from '../../assets/icons/send.svg?react';
 import underline from '../../assets/underline.png';
 import { FeatureItem } from '../../components/molecules/FeatureItem';
 import { ImageCard } from '../../components/molecules/ImageCard';
+import { TripCard } from './components/TripCard';
+import { StepItem } from './components/StepItem';
+import { TestimonialSlide } from './components/TestimonialSlide';
 
 export { Page };
 
@@ -22,7 +25,7 @@ function Page() {
           <p className="font-poppins uppercase font-bold text-sm xl:text-xl text-light-red">
             Top Travel Destinations Worldwide
           </p>
-          <h1 className="font-serif font-bold mt-4 mb-6 text-5xl xl:text-[5.25rem] leading-none text-black dark:text-white">
+          <h1 className="font-serif font-bold mt-4 mb-6 text-5xl xl:text-[5rem] leading-none text-black dark:text-white">
             Travel,{' '}
             <span className="relative inline-block">
               enjoy
@@ -78,19 +81,28 @@ function Page() {
           <div className="hidden xl:block absolute -right-2 bottom-8 -z-10 w-24 h-64 bg-[url(/src/assets/decoration-02.svg)] bg-no-repeat bg-contain"></div>
         </div>
       </section>
-      <section className="grid xl:grid-cols-2">
+      <section className="grid xl:grid-cols-2 gap-28 ">
         <div>
-          <p className="subtitle">Fast and easy</p>
-          <h2 className="title">Book Your Next Trip in 3 Easy Steps</h2>
+          <p className="subtitle max-xl:text-center">Fast and easy</p>
+          <h2 className="title max-xl:text-center">Book Your Next Trip in 3 Simple Steps</h2>
+          <ul className="max-w-[40ch] flex flex-col gap-8 xl:gap-12 max-xl:mx-auto">
+            {travelSteps.map((step) => (
+              <li key={step.title}>
+                <StepItem {...step} />
+              </li>
+            ))}
+          </ul>
         </div>
-        <div></div>
+        <div className="mt-16 hidden xl:block">
+          <TripCard />
+        </div>
       </section>
-      <section className="grid xl:grid-cols-2">
+      <section className="grid xl:grid-cols-2 gap-20">
         <div>
-          <p className="subtitle">Testimonials</p>
-          <h2 className="title">What people say about us</h2>
+          <p className="subtitle max-xl:text-center">Testimonials</p>
+          <h2 className="title max-xl:text-center">What People Say About Us</h2>
         </div>
-        <div></div>
+        <TestimonialSlide items={testimonials} />
       </section>
       <div className="flex flex-wrap gap-4 justify-center xl:justify-between">
         {airlines.map((airline) => (

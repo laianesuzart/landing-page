@@ -43,6 +43,51 @@ export const destinations = [
   },
 ];
 
+export const travelSteps = [
+  {
+    title: 'Choose Your Destination',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. ',
+    icon: '/src/assets/icons/map-pin.svg',
+    color: 'yellow',
+  },
+  {
+    title: 'Secure Your Payment',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. ',
+    icon: '/src/assets/icons/payment.svg',
+    color: 'orange',
+  },
+  {
+    title: 'Arrive at the Airport on Your Travel Date',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. ',
+    icon: '/src/assets/icons/airplane.svg',
+    color: 'blue',
+  },
+];
+
+export const testimonials = [
+  {
+    image: '/src/assets/testimonial-01.jpg',
+    quote:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra blandit erat, a feugiat dui. Quisque justo neque, maximus in ex nec, faucibus bibendum nunc.',
+    author: 'Mike Taylor',
+    subtitle: 'Lahore, Pakistan',
+  },
+  {
+    image: '/src/assets/testimonial-02.png',
+    quote:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra blandit erat, a feugiat dui. Quisque justo neque, maximus in ex nec, faucibus bibendum nunc.',
+    author: 'Kate Thomas',
+    subtitle: 'CEO of Red Button',
+  },
+  {
+    image: '/src/assets/testimonial-03.png',
+    quote:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra blandit erat, a feugiat dui. Quisque justo neque, maximus in ex nec, faucibus bibendum nunc.',
+    author: 'Maria Silva',
+    subtitle: 'São Paulo, Brazil',
+  },
+];
+
 export const airlines = [
   { image: '/src/assets/airlines-01.png', alt: 'Axon Airlines' },
   { image: '/src/assets/airlines-02.png', alt: 'Jetstar' },
