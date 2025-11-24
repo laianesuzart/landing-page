@@ -10,7 +10,7 @@ export function TripCard() {
       aria-hidden="true"
       className="relative bg-white pt-5 px-6 pb-8 rounded-3xl shadow-xl w-fit after:absolute after:w-3/4 after:h-full after:top-0 after:right-0 after:bg-[#59B1E6] after:opacity-60 after:blur-[75px] after:-z-10 after:-translate-y-16 after:translate-x-8"
     >
-      <img src="/src/assets/greece.jpg" alt="" className="rounded-3xl" />
+      <img src="assets/greece.jpg" alt="" className="rounded-3xl" />
       <div className="pt-6 font-medium text-[#84829A]">
         <h3 className="text-lg text-black">Trip to Greece</h3>
         <p className="py-3">14-29 June &#183; by Robbin Joseph</p>
@@ -35,11 +35,7 @@ export function TripCard() {
       </div>
       <div className="absolute shadow-xs rounded-2xl p-5 bg-white bottom-16 right-0 translate-x-5/12">
         <div className="flex gap-3">
-          <img
-            src="/src/assets/ongoing-trip.jpg"
-            alt=""
-            className="size-12 rounded-full object-cover"
-          />
+          <img src="assets/ongoing-trip.jpg" alt="" className="size-12 rounded-full object-cover" />
           <div>
             <span className="text-sm text-[#84829A] font-medium">Ongoing</span>
             <h3 className="font-medium mb-2 text-lg text-black">Trip to Rome</h3>
